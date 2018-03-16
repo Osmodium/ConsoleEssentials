@@ -7,8 +7,8 @@
     <ProjectGuid>{6D62176E-6D2B-4A25-BB26-6912A9F14C3C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ConsoleEssentials.NET._4._0</RootNamespace>
-    <AssemblyName>ConsoleEssentials.NET.4.0</AssemblyName>
+    <RootNamespace>ConsoleEssentials</RootNamespace>
+    <AssemblyName>ConsoleEssentials</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -18,7 +18,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>TRACE;DEBUG;NET4</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;NET40</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
@@ -29,7 +29,7 @@
     <DefineConstants>TRACE;NET4</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Release\ConsoleEssentials.NET.4.0.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\ConsoleEssentials.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -47,9 +47,9 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>SET outdir=Output\net40\
+    <PostBuildEvent>SET outdir=Nuget\lib\net40\
 if not exist "$(SolutionDir)%25outdir%25" mkdir $(SolutionDir)%25outdir%25
-COPY "$(TargetDir)$(TargetName).dll" "$(SolutionDir)%25outdir%25$(SolutionName).dll" /Y
-COPY "$(TargetDir)$(TargetName).xml" "$(SolutionDir)%25outdir%25$(SolutionName).xml" /Y</PostBuildEvent>
+COPY "$(TargetDir)$(TargetName).dll" "$(SolutionDir)%25outdir%25$(TargetName).dll" /Y
+COPY "$(TargetDir)$(TargetName).xml" "$(SolutionDir)%25outdir%25$(TargetName).xml" /Y</PostBuildEvent>
   </PropertyGroup>
 </Project>

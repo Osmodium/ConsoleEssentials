@@ -7,8 +7,8 @@
     <ProjectGuid>{826C7984-9D27-4D66-9E8F-21DC404CD0F5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ConsoleEssentials.NET._4._5</RootNamespace>
-    <AssemblyName>ConsoleEssentials.NET.4.5</AssemblyName>
+    <RootNamespace>ConsoleEssentials</RootNamespace>
+    <AssemblyName>ConsoleEssentials</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -17,7 +17,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>TRACE;DEBUG;NET4_5</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;NET45</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
@@ -25,10 +25,10 @@
     <DebugType>none</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE;NET4_5</DefineConstants>
+    <DefineConstants>TRACE;NET45</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Release\ConsoleEssentials.NET.4.5.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\ConsoleEssentials.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -51,9 +51,9 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>SET outdir=Output\net45\
+    <PostBuildEvent>SET outdir=Nuget\lib\net45\
 if not exist "$(SolutionDir)%25outdir%25" mkdir $(SolutionDir)%25outdir%25
-COPY "$(TargetDir)$(TargetName).dll" "$(SolutionDir)%25outdir%25$(SolutionName).dll" /Y
-COPY "$(TargetDir)$(TargetName).xml" "$(SolutionDir)%25outdir%25$(SolutionName).xml" /Y</PostBuildEvent>
+COPY "$(TargetDir)$(TargetName).dll" "$(SolutionDir)%25outdir%25$(TargetName).dll" /Y
+COPY "$(TargetDir)$(TargetName).xml" "$(SolutionDir)%25outdir%25$(TargetName).xml" /Y</PostBuildEvent>
   </PropertyGroup>
 </Project>

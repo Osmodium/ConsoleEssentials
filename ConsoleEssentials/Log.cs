@@ -108,7 +108,7 @@ namespace ConsoleEssentials
         /// <param name="ex"></param>
         public static void Information(Exception ex)
         {
-#if NET4_5 || NET4_5_1 || NET4_5_2 || NET4_6 || NET4_6_1
+#if NET45 || NET451 || NET452 || NET46 || NET461
             Information($"{ex.Message}[{ex.HResult}]{ex.StackTrace}");
 #else
             Information($"{ex.Message}{ex.StackTrace}");
@@ -122,7 +122,7 @@ namespace ConsoleEssentials
         /// <param name="ex"></param>
         public static void Information(string message, Exception ex)
         {
-#if NET4_5 || NET4_5_1 || NET4_5_2 || NET4_6 || NET4_6_1
+#if NET45 || NET451 || NET452 || NET46 || NET461
             Information($"{message}{Environment.NewLine}{ex.Message}[{ex.HResult}]{ex.StackTrace}");
 #else
             Information($"{message}{Environment.NewLine}{ex.Message}{ex.StackTrace}");
@@ -151,7 +151,7 @@ namespace ConsoleEssentials
         /// <param name="ex"></param>
         public static void Warning(Exception ex)
         {
-#if NET4_5 || NET4_5_1 || NET4_5_2 || NET4_6 || NET4_6_1
+#if NET45 || NET451 || NET452 || NET46 || NET461
             Warning($"{ex.Message}[{ex.HResult}]{ex.StackTrace}");
 #else
             Warning($"{ex.Message}{ex.StackTrace}{Environment.NewLine}");
@@ -165,7 +165,7 @@ namespace ConsoleEssentials
         /// <param name="ex"></param>
         public static void Warning(string message, Exception ex)
         {
-#if NET4_5 || NET4_5_1 || NET4_5_2 || NET4_6 || NET4_6_1
+#if NET45 || NET451 || NET452 || NET46 || NET461
             Warning($"{message}{Environment.NewLine}{ex.Message}[{ex.HResult}]{ex.StackTrace}");
 #else
             Warning($"{message}{Environment.NewLine}{ex.Message}{ex.StackTrace}");
@@ -194,7 +194,7 @@ namespace ConsoleEssentials
         /// <param name="ex"></param>
         public static void Error(Exception ex)
         {
-#if NET4_5 || NET4_5_1 || NET4_5_2 || NET4_6 || NET4_6_1
+#if NET45 || NET451 || NET452 || NET46 || NET461
             Error($"{ex.Message}[{ex.HResult}]{ex.StackTrace}");
 #else
             Error($"{ex.Message}{ex.StackTrace}");
@@ -208,7 +208,7 @@ namespace ConsoleEssentials
         /// <param name="ex"></param>
         public static void Error(string message, Exception ex)
         {
-#if NET4_5 || NET4_5_1 || NET4_5_2 || NET4_6 || NET4_6_1
+#if NET45 || NET451 || NET452 || NET46 || NET461
             Error($"{message}{Environment.NewLine}{ex.Message}[{ex.HResult}]{ex.StackTrace}");
 #else
             Error($"{message}{Environment.NewLine}{ex.Message}{ex.StackTrace}");
@@ -240,7 +240,7 @@ namespace ConsoleEssentials
         /// <param name="ex"></param>
         public static void Critical(Exception ex)
         {
-#if NET4_5 || NET4_5_1 || NET4_5_2 || NET4_6 || NET4_6_1
+#if NET45 || NET451 || NET452 || NET46 || NET461
             Critical($"{ex.Message}[{ex.HResult}]{ex.StackTrace}");
 #else
             Critical($"{ex.Message}{ex.StackTrace}");
@@ -254,7 +254,7 @@ namespace ConsoleEssentials
         /// <param name="ex"></param>
         public static void Critical(string message, Exception ex)
         {
-#if NET4_5 || NET4_5_1 || NET4_5_2 || NET4_6 || NET4_6_1
+#if NET45 || NET451 || NET452 || NET46 || NET461
             Critical($"{message}{Environment.NewLine}{ex.Message}[{ex.HResult}]{ex.StackTrace}");
 #else
             Critical($"{message}{Environment.NewLine}{ex.Message}{ex.StackTrace}");

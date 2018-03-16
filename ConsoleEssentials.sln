@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleEssentials.NET.4.5.2
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleEssentials.NET.4.6", "ConsoleEssentials.NET.4.6\ConsoleEssentials.NET.4.6.csproj", "{CC46B7E9-C533-4873-830A-D70FE6420F04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleEssentials.NET.6.1", "ConsoleEssentials.NET.6.1\ConsoleEssentials.NET.6.1.csproj", "{C32623D5-5C59-41E0-9067-C4732B8D49B9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleEssentials.NET.4.6.1", "ConsoleEssentials.NET.6.1\ConsoleEssentials.NET.4.6.1.csproj", "{C32623D5-5C59-41E0-9067-C4732B8D49B9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
