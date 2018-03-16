@@ -1,0 +1,164 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ConsoleEssentials.NET.6.1</name>
+    </assembly>
+    <members>
+        <member name="T:ConsoleEssentials.Arguments">
+            <summary>
+            Used to handle arguments from a console in a consistent way.
+            </summary>
+        </member>
+        <member name="M:ConsoleEssentials.Arguments.GetOptions(System.String[])">
+            <summary>
+            Parse all the argument strings to the interpreter to generate the options hashtable
+            </summary>
+            <param name="args"></param>
+            <returns>Options hashtable</returns>
+        </member>
+        <member name="M:ConsoleEssentials.Arguments.CheckOptions(System.Collections.Hashtable,System.String[])">
+            <summary>
+            Verifies that the options required is indeed present in the options table.
+            </summary>
+            <param name="hashtable">The options hashtable containing the options.</param>
+            <param name="requiredOptions">Array containing the names of all the required opions.</param>
+            <returns>Array of all the missing required options.</returns>
+        </member>
+        <member name="M:ConsoleEssentials.Arguments.GetOptionString(System.Collections.Hashtable,System.String)">
+            <summary>
+            Gets the string value of the option.
+            </summary>
+            <param name="hashtable">The options hashtable containing the options.</param>
+            <param name="name">Name of the option to get the string value of.</param>
+            <returns>The string value of the named option.</returns>
+        </member>
+        <member name="M:ConsoleEssentials.Arguments.GetOptionStringIfNotNull(System.Collections.Hashtable,System.String,System.String)">
+            <summary>
+            Gets the string value of the option if it is not null or empty, otherwise the original value is returned.
+            </summary>
+            <param name="hashtable"></param>
+            <param name="originalValue"></param>
+            <param name="name"></param>
+            <returns>If the option does exists and has a value it gets returned, otherwise the original value is returned.</returns>
+        </member>
+        <member name="M:ConsoleEssentials.Arguments.GetOptionSwitch(System.Collections.Hashtable,System.String)">
+            <summary>
+            Returns true if the option switch is present, false otherwise.
+            </summary>
+            <param name="hashtable">The options hashtable containing the options.</param>
+            <param name="name">Name of the switch option.</param>
+            <returns>True or false if the option name is present.</returns>
+        </member>
+        <member name="M:ConsoleEssentials.Arguments.ContainsOption(System.Collections.Hashtable,System.String)">
+            <summary>
+            Checks if the option with a name is in the argument collection
+            </summary>
+            <param name="hashtable"></param>
+            <param name="name"></param>
+            <returns>True or false weather an option with the name exists in the options collection.</returns>
+        </member>
+        <member name="T:ConsoleEssentials.Log">
+            <summary>
+            Logging for console and text files.
+            </summary>
+        </member>
+        <member name="P:ConsoleEssentials.Log.LogPath">
+            <summary>
+            Set the log to text file path to a different one than the one that gets created next to the executeable.
+            </summary>
+        </member>
+        <member name="M:ConsoleEssentials.Log.SetLogToFile(System.Boolean)">
+            <summary>
+            Turn logging to text files on/off
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:ConsoleEssentials.Log.SetLogToConsole(System.Boolean)">
+            <summary>
+            Turn logging to the console on/off
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="P:ConsoleEssentials.Log.LogDateTime">
+            <summary>
+            Gets the date time of the log in a file valid format.
+            </summary>
+        </member>
+        <member name="M:ConsoleEssentials.Log.Information(System.String)">
+            <summary>
+            Log an information message (INFO)
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:ConsoleEssentials.Log.Information(System.Exception)">
+            <summary>
+            Log an exception as an information message (INFO)
+            </summary>
+            <param name="ex"></param>
+        </member>
+        <member name="M:ConsoleEssentials.Log.Information(System.String,System.Exception)">
+            <summary>
+            Log both a message and an exception as an information message (INFO)
+            </summary>
+            <param name="message"></param>
+            <param name="ex"></param>
+        </member>
+        <member name="M:ConsoleEssentials.Log.Warning(System.String)">
+            <summary>
+            Log a warning message (WARN)
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:ConsoleEssentials.Log.Warning(System.Exception)">
+            <summary>
+            Log an exception as a warning message (WARN)
+            </summary>
+            <param name="ex"></param>
+        </member>
+        <member name="M:ConsoleEssentials.Log.Warning(System.String,System.Exception)">
+            <summary>
+            Log both a message and an exception as a warning message (WARN)
+            </summary>
+            <param name="message"></param>
+            <param name="ex"></param>
+        </member>
+        <member name="M:ConsoleEssentials.Log.Error(System.String)">
+            <summary>
+            Log an error message (ERROR)
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:ConsoleEssentials.Log.Error(System.Exception)">
+            <summary>
+            Log an exception as an error message (ERROR)
+            </summary>
+            <param name="ex"></param>
+        </member>
+        <member name="M:ConsoleEssentials.Log.Error(System.String,System.Exception)">
+            <summary>
+            Log both a message and an exception as an error message (ERROR)
+            </summary>
+            <param name="message"></param>
+            <param name="ex"></param>
+        </member>
+        <member name="M:ConsoleEssentials.Log.Critical(System.String)">
+            <summary>
+            Log a critical message (CRIT)
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:ConsoleEssentials.Log.Critical(System.Exception)">
+            <summary>
+            Log an exception as a critical message (CRIT)
+            </summary>
+            <param name="ex"></param>
+        </member>
+        <member name="M:ConsoleEssentials.Log.Critical(System.String,System.Exception)">
+            <summary>
+            Log both a message and an exception as a critical message (CRIT)
+            </summary>
+            <param name="message"></param>
+            <param name="ex"></param>
+        </member>
+    </members>
+</doc>
