@@ -34,3 +34,5 @@ Thumbs.db
 
 .vs/config/applicationhost.config
 .vs/
+**/Output
+**/Nuget
