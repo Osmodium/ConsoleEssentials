@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleEssentials.NET.4.6",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleEssentials.NET.4.6.1", "ConsoleEssentials.NET.6.1\ConsoleEssentials.NET.4.6.1.csproj", "{C32623D5-5C59-41E0-9067-C4732B8D49B9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleEssentials.NET.3.5", "ConsoleEssentials.NET.3.5\ConsoleEssentials.NET.3.5.csproj", "{A30080CB-FDC6-403B-A08E-51352BE9D066}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{C32623D5-5C59-41E0-9067-C4732B8D49B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C32623D5-5C59-41E0-9067-C4732B8D49B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C32623D5-5C59-41E0-9067-C4732B8D49B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A30080CB-FDC6-403B-A08E-51352BE9D066}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A30080CB-FDC6-403B-A08E-51352BE9D066}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A30080CB-FDC6-403B-A08E-51352BE9D066}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A30080CB-FDC6-403B-A08E-51352BE9D066}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

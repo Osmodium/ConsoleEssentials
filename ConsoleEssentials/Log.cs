@@ -1,5 +1,8 @@
 ﻿using System;
 using System.IO;
+#if !NET45 && !NET451 && !NET452 && !NET46 && !NET461
+using System.Runtime.InteropServices;
+#endif
 
 namespace ConsoleEssentials
 {
@@ -8,7 +11,7 @@ namespace ConsoleEssentials
     /// </summary>
     public static class Log
     {
-        #region Properties
+#region Properties
 
         private static bool m_LogToConsole = true;
         private static bool m_LogToFile = true;
@@ -68,7 +71,7 @@ namespace ConsoleEssentials
             }
         }
 
-        #endregion
+#endregion
 
         private static void WriteLog(string message, string type)
         {
@@ -91,7 +94,7 @@ namespace ConsoleEssentials
             }
         }
 
-        #region Information
+#region Information
 
         /// <summary>
         /// Log an information message (INFO)
@@ -111,7 +114,8 @@ namespace ConsoleEssentials
 #if NET45 || NET451 || NET452 || NET46 || NET461
             Information($"{ex.Message}[{ex.HResult}]{ex.StackTrace}");
 #else
-            Information($"{ex.Message}{ex.StackTrace}");
+            int hresult = Marshal.GetHRForException(ex);
+            Information($"{ex.Message}[{hresult}]{ex.StackTrace}");
 #endif
         }
 
@@ -125,13 +129,14 @@ namespace ConsoleEssentials
 #if NET45 || NET451 || NET452 || NET46 || NET461
             Information($"{message}{Environment.NewLine}{ex.Message}[{ex.HResult}]{ex.StackTrace}");
 #else
-            Information($"{message}{Environment.NewLine}{ex.Message}{ex.StackTrace}");
+            int hresult = Marshal.GetHRForException(ex);
+            Information($"{message}{Environment.NewLine}{ex.Message}[{hresult}]{ex.StackTrace}");
 #endif
         }
 
-        #endregion
+#endregion
 
-        #region Warning
+#region Warning
 
         /// <summary>
         /// Log a warning message (WARN)
@@ -154,7 +159,8 @@ namespace ConsoleEssentials
 #if NET45 || NET451 || NET452 || NET46 || NET461
             Warning($"{ex.Message}[{ex.HResult}]{ex.StackTrace}");
 #else
-            Warning($"{ex.Message}{ex.StackTrace}{Environment.NewLine}");
+            int hresult = Marshal.GetHRForException(ex);
+            Warning($"{ex.Message}[{hresult}]{ex.StackTrace}");
 #endif
         }
 
@@ -168,13 +174,14 @@ namespace ConsoleEssentials
 #if NET45 || NET451 || NET452 || NET46 || NET461
             Warning($"{message}{Environment.NewLine}{ex.Message}[{ex.HResult}]{ex.StackTrace}");
 #else
-            Warning($"{message}{Environment.NewLine}{ex.Message}{ex.StackTrace}");
+            int hresult = Marshal.GetHRForException(ex);
+            Warning($"{message}{Environment.NewLine}{ex.Message}[{hresult}]{ex.StackTrace}");
 #endif
         }
 
-        #endregion
+#endregion
 
-        #region Error
+#region Error
 
         /// <summary>
         /// Log an error message (ERROR)
@@ -197,7 +204,8 @@ namespace ConsoleEssentials
 #if NET45 || NET451 || NET452 || NET46 || NET461
             Error($"{ex.Message}[{ex.HResult}]{ex.StackTrace}");
 #else
-            Error($"{ex.Message}{ex.StackTrace}");
+            int hresult = Marshal.GetHRForException(ex);
+            Error($"{ex.Message}[{hresult}]{ex.StackTrace}");
 #endif
         }
 
@@ -211,13 +219,14 @@ namespace ConsoleEssentials
 #if NET45 || NET451 || NET452 || NET46 || NET461
             Error($"{message}{Environment.NewLine}{ex.Message}[{ex.HResult}]{ex.StackTrace}");
 #else
-            Error($"{message}{Environment.NewLine}{ex.Message}{ex.StackTrace}");
+            int hresult = Marshal.GetHRForException(ex);
+            Error($"{message}{Environment.NewLine}{ex.Message}[{hresult}]{ex.StackTrace}");
 #endif
         }
 
-        #endregion
+#endregion
 
-        #region Critical
+#region Critical
 
         /// <summary>
         /// Log a critical message (CRIT)
@@ -243,7 +252,8 @@ namespace ConsoleEssentials
 #if NET45 || NET451 || NET452 || NET46 || NET461
             Critical($"{ex.Message}[{ex.HResult}]{ex.StackTrace}");
 #else
-            Critical($"{ex.Message}{ex.StackTrace}");
+            int hresult = Marshal.GetHRForException(ex);
+            Critical($"{ex.Message}[{hresult}]{ex.StackTrace}");
 #endif
         }
 
@@ -257,10 +267,11 @@ namespace ConsoleEssentials
 #if NET45 || NET451 || NET452 || NET46 || NET461
             Critical($"{message}{Environment.NewLine}{ex.Message}[{ex.HResult}]{ex.StackTrace}");
 #else
-            Critical($"{message}{Environment.NewLine}{ex.Message}{ex.StackTrace}");
+            int hresult = Marshal.GetHRForException(ex);
+            Critical($"{message}{Environment.NewLine}{ex.Message}[{hresult}]{ex.StackTrace}");
 #endif
         }
 
-        #endregion
+#endregion
     }
 }
