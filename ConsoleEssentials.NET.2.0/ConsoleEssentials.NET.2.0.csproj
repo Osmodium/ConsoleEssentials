@@ -4,12 +4,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6D62176E-6D2B-4A25-BB26-6912A9F14C3C}</ProjectGuid>
+    <ProjectGuid>{5E6B6660-564D-4F61-9BB2-12B19892D017}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ConsoleEssentials</RootNamespace>
     <AssemblyName>ConsoleEssentials</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -18,7 +18,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>TRACE;DEBUG;NET40</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;NET20</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
@@ -26,7 +26,7 @@
     <DebugType>none</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE;NET40</DefineConstants>
+    <DefineConstants>TRACE;NET20</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>bin\Release\ConsoleEssentials.xml</DocumentationFile>
@@ -47,7 +47,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>SET outdir=Nuget\lib\net40\
+    <PostBuildEvent>SET outdir=Nuget\lib\net20\
 if not exist "$(SolutionDir)%25outdir%25" mkdir $(SolutionDir)%25outdir%25
 COPY "$(TargetDir)$(TargetName).dll" "$(SolutionDir)%25outdir%25$(TargetName).dll" /Y
 COPY "$(TargetDir)$(TargetName).xml" "$(SolutionDir)%25outdir%25$(TargetName).xml" /Y</PostBuildEvent>

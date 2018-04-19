@@ -1,5 +1,17 @@
 ﻿using System.Collections;
+#if !NET30 && !NET20
 using System.Linq;
+#else
+using System.Collections.Generic;
+namespace System.Runtime.CompilerServices
+{
+    /// <summary>
+    /// Used to define extensions in .NET 3.0 and 2.0
+    /// </summary>
+    [AttributeUsage(AttributeTargets.Assembly | AttributeTargets.Class | AttributeTargets.Method)]
+    public sealed class ExtensionAttribute : Attribute { }
+}
+#endif
 
 namespace ConsoleEssentials
 {
@@ -41,7 +53,17 @@ namespace ConsoleEssentials
         /// <returns>Array of all the missing required options.</returns>
         public static string[] CheckOptions(this Hashtable hashtable, string[] requiredOptions)
         {
+#if NET30 || NET20
+            List<string> missingOptions = new List<string>();
+            foreach (string option in requiredOptions)
+            {
+                if (string.IsNullOrEmpty(hashtable.GetOptionString(option)))
+                    missingOptions.Add(option);
+            }
+            return missingOptions.ToArray();
+#else
             return requiredOptions.Where(requiredOption => !hashtable.ContainsKey(requiredOption.ToLower())).ToArray();
+#endif
         }
 
         /// <summary>
