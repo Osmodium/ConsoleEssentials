@@ -37,3 +37,4 @@ Thumbs.db
 **/Output
 **/Nuget/Versions
 **/Nuget/Build/lib
+**/Nuget/lib
