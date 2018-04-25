@@ -11,7 +11,7 @@ This is the list of current features
 * Customizable log location and file format.
 * Parse arguments.
 * Verify arguments.
-* Parsing of arguments.
+* Easy extraction of parameter values.
 
 > More features will be added along the way as they are needed.
 
