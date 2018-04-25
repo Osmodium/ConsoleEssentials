@@ -15,6 +15,21 @@ This is the list of current features
 
 > More features will be added along the way as they are needed.
 
+### Motivation
+Through the course of a day at my work, I often come across some small task that requires automation or to create a simple POC of something new that can be isolated completely and tested separately. I had several "GenericConsole" projects lying around where stuff would be bunched together, or I would have 100 small projects that had 30% redundant code in it. This usually was all of the parameter parsing and logging in it, and every project would be a little bit different than the one before. So I finally decided to create a NuGet package for it, so that when ever I would update it, ALL of my previous projects would almost instantly benefit from that update.
+
+### Installation
+The easiest way to install it is to find it on the NuGet market place, but here's some alternatives.
+
+**Package Manager**
+> PM> Install-Package ConsoleEssentials -Version 1.1.0
+
+**.NET CLI**
+> dotnet add package ConsoleEssentials --version 1.1.0
+
+**Paket CLI**
+> paket add ConsoleEssentials --version 1.1.0
+
 ### Example Code
 
 The example below showcases the parsing of parameters (arguments/args) and some simple loggin to the default location.
@@ -87,21 +102,6 @@ To run the console application we need to parse the arguments like these example
     25-Apr-18 15:34:35 - INFO  - This is the first param value
     25-Apr-18 15:34:35 - WARN  - C:\Temp files\lala
     25-Apr-18 15:34:35 - CRIT  - Here's the optional param
-
-### Motivation
-Through the course of a day at my work, I often come across some small task that requires automation or to create a simple POC of something new that can be isolated completely and tested separately. I had several "GenericConsole" projects lying around where stuff would be bunched together, or I would have 100 small projects that had 30% redundant code in it. This usually was all of the parameter parsing and logging in it, and every project would be a little bit different than the one before. So I finally decided to create a NuGet package for it, so that when ever I would update it, ALL of my previous projects would almost instantly benefit from that update.
-
-### Installation
-The easiest way to install it is to find it on the NuGet market place, but here's some alternatives.
-
-**Package Manager**
-> PM> Install-Package ConsoleEssentials -Version 1.1.0
-
-**.NET CLI**
-> dotnet add package ConsoleEssentials --version 1.1.0
-
-**Paket CLI**
-> paket add ConsoleEssentials --version 1.1.0
 
 ### Contribute
 The easiest way to contribut is to make pull requests to the repository along with a description of what the commit contains.
