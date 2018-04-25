@@ -35,7 +35,7 @@ The easiest way to install it is to find it on the NuGet market place, but here'
 The example below showcases the parsing of parameters (arguments/args) and some simple loggin to the default location.
 
 ```csharp
-Using ConsoleEssentials;
+using ConsoleEssentials;
 
 // Required parameters
 private static string REQ_PARAM1 = "RequiredParam1";
