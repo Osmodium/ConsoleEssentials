@@ -45,7 +45,7 @@ private static string REQ_PARAM2 = "RequiredParam2";
 private static string OPTIONAL_PARAM = "OptionalParam";
 private static string OPTIONAL_SWITCH = "Switch";
 
-private static readonly string[] RequiredParameters = { REQ_PARAM };
+private static readonly string[] RequiredParameters = { REQ_PARAM1, REQ_PARAM2 };
 private static Hashtable m_Parameters;
 
 public static void Main(string[] args)
@@ -60,16 +60,19 @@ public static void Main(string[] args)
 		return;
 	}
 	
+	// Use "GetOptionString" if you know it's there.
 	string RequiredParam1Value = m_Parameters.GetOptionString(REQ_PARAM1);
 	string RequiredParam2Value = m_Parameters.GetOptionString(REQ_PARAM2);
-	
-	string OptionalParamValue = m_Parameters.GetOptionStringIfNotNull(OPTIONAL_PARAM);
-	
+
+	// Use "GetOptionStringIfNotNull" if its an optional string parameter. The first parameter of this method is the default value.
+	string OptionalParamValue = m_Parameters.GetOptionStringIfNotNull(null, OPTIONAL_PARAM);
+
+	// Use "GetOptionSwitch" to set a bool to if the switch is set or not.
 	bool OptionalSwitchValue = m_Parameters.GetOptionSwitch(OPTIONAL_SWITCH);
-	
+
 	Log.Information(RequiredParam1Value);
 	Log.Warning(RequiredParam2Value);
-	
+
 	if (OptionalSwitchValue)
 	{
 		if (!string.IsNullOrEmpty(OptionalParamValue))
