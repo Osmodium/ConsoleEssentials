@@ -50,17 +50,17 @@ public static void Main(string[] args)
 	
 	bool OptionalSwitchValue = m_Parameters.GetOptionSwitch(OPTIONAL_SWITCH);
 	
-    Log.Information(RequiredParam1Value);
-    Log.Warning(RequiredParam2Value);
-    
-    if (OptionalSwitchValue)
-    {
-    	if (!string.IsNullOrEmpty(OptionalParamValue))
-    		Log.Critical(OptionalParamValue);
-        else
-        	Log.Information("No optional value supllied!");
-    }
-    
+	Log.Information(RequiredParam1Value);
+	Log.Warning(RequiredParam2Value);
+	
+	if (OptionalSwitchValue)
+	{
+		if (!string.IsNullOrEmpty(OptionalParamValue))
+			Log.Critical(OptionalParamValue);
+		else
+			Log.Information("No optional value supllied!");
+	}
+	
 	// Your code that utilizes the values
 }
 ```
