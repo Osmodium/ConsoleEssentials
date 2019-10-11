@@ -12,6 +12,7 @@ This is the list of current features
 * Parse arguments.
 * Verify arguments.
 * Easy extraction of parameter values.
+* Available for all major versions of .NET
 
 > More features will be added along the way as they are needed.
 
