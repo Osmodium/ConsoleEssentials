@@ -72,10 +72,10 @@ public static void Main(string[] args)
 	// Use "GetOptionSwitch" to set a bool to if the switch is set or not.
 	bool OptionalSwitchValue = m_Parameters.GetOptionSwitch(OPTIONAL_SWITCH);
 
-    // Use "GetMainOption" to get the option which has no name. This option can't follow a switch type.
-    string mainParameterValue = m_Parameters.GetMainOption();
-    if (!string.IsNullOrEmpty(mainParameterValue))
-        Log.Error(mainParameterValue);
+	// Use "GetMainOption" to get the option which has no name. This option can't follow a switch type.
+	string mainParameterValue = m_Parameters.GetMainOption();
+	if (!string.IsNullOrEmpty(mainParameterValue))
+		Log.Error(mainParameterValue);
 
 	Log.Information(RequiredParam1Value);
 	Log.Warning(RequiredParam2Value);
