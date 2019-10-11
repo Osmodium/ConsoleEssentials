@@ -9,7 +9,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
 	<projectUrl>https://github.com/Osmodium/ConsoleEssentials</projectUrl>
     <description>ConsoleEssentials is a lightweight utility which handles most of the tedious tasks when making a console application.</description>
-    <releaseNotes>Added support for .NET 3.0 and .NET 2.0</releaseNotes>
+    <releaseNotes>Added support for .NET 4.7.1 Added support for first no-name argument. Use GetMainOption.</releaseNotes>
 	<copyright>Christian Schubert</copyright>
 	<tags>console log arguments essentials</tags>
     <dependencies>
@@ -22,6 +22,7 @@
 	  <group targetFramework=".NETFramework4.5.2" />
 	  <group targetFramework=".NETFramework4.6" />
 	  <group targetFramework=".NETFramework4.6.1" />
+      <group targetFramework=".NETFramework4.7.1" />
 	</dependencies>
   </metadata>
 </package>

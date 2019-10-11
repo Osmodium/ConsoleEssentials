@@ -20,6 +20,8 @@ namespace ConsoleEssentials
     /// </summary>
     public static class Arguments
     {
+        private const string MAIN_ARGUMENT_NAME = "__main__";
+
         /// <summary>
         /// Parse all the argument strings to the interpreter to generate the options hashtable
         /// </summary>
@@ -30,9 +32,13 @@ namespace ConsoleEssentials
             Hashtable options = new Hashtable();
             for (int i = 0; i < args.Length; ++i)
             {
-                string arg = args[i];
+                string arg = args[i].Trim();
                 if (!arg[0].Equals('-'))
+                {
+                    if (!options.ContainsKey(MAIN_ARGUMENT_NAME))
+                        options.Add(MAIN_ARGUMENT_NAME, arg.ToLower());
                     continue;
+                }
                 int j = i + 1;
                 if (j >= args.Length || args[j][0].Equals('-'))
                     options.Add(arg.TrimStart('-').ToLower(), true);
@@ -64,6 +70,18 @@ namespace ConsoleEssentials
 #else
             return requiredOptions.Where(requiredOption => !hashtable.ContainsKey(requiredOption.ToLower())).ToArray();
 #endif
+        }
+
+        /// <summary>
+        /// Gets the string value of the "main" option.
+        /// This is a shorthand way of getting the argument which was not specified with a dash ('-').
+        /// It is the equivalent of calling GetOptionStringIfNotNull with name "__main__".
+        /// </summary>
+        /// <param name="hashtable"></param>
+        /// <returns>The main argument as string if present</returns>
+        public static string GetMainOption(this Hashtable hashtable)
+        {
+            return hashtable.GetOptionStringIfNotNull(null, MAIN_ARGUMENT_NAME);
         }
 
         /// <summary>

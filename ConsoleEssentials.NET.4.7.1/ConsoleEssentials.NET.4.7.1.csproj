@@ -4,12 +4,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CC46B7E9-C533-4873-830A-D70FE6420F04}</ProjectGuid>
+    <ProjectGuid>{A84DB936-4567-4128-9CCF-BD40347D0244}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ConsoleEssentials</RootNamespace>
     <AssemblyName>ConsoleEssentials</AssemblyName>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -17,18 +17,21 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>TRACE;DEBUG;NET46</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;NET471</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE;NET46</DefineConstants>
+    <DefineConstants>TRACE;NET471</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>bin\Release\ConsoleEssentials.xml</DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -52,7 +55,7 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>if $(ConfigurationName) == Debug goto :nocopy
-SET outdir=Nuget\lib\net46\
+SET outdir=Nuget\lib\net471\
 if not exist "$(SolutionDir)%25outdir%25" mkdir $(SolutionDir)%25outdir%25
 COPY "$(TargetDir)$(TargetName).dll" "$(SolutionDir)%25outdir%25$(TargetName).dll" /Y
 COPY "$(TargetDir)$(TargetName).xml" "$(SolutionDir)%25outdir%25$(TargetName).xml" /Y

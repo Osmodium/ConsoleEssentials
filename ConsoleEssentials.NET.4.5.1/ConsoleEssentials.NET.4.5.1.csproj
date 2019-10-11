@@ -51,9 +51,11 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>SET outdir=Nuget\lib\net451\
+    <PostBuildEvent>if $(ConfigurationName) == Debug goto :nocopy
+SET outdir=Nuget\lib\net451\
 if not exist "$(SolutionDir)%25outdir%25" mkdir $(SolutionDir)%25outdir%25
 COPY "$(TargetDir)$(TargetName).dll" "$(SolutionDir)%25outdir%25$(TargetName).dll" /Y
-COPY "$(TargetDir)$(TargetName).xml" "$(SolutionDir)%25outdir%25$(TargetName).xml" /Y</PostBuildEvent>
+COPY "$(TargetDir)$(TargetName).xml" "$(SolutionDir)%25outdir%25$(TargetName).xml" /Y
+:nocopy</PostBuildEvent>
   </PropertyGroup>
 </Project>

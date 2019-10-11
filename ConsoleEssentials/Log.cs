@@ -1,6 +1,6 @@
 ﻿using System;
 using System.IO;
-#if !NET45 && !NET451 && !NET452 && !NET46 && !NET461
+#if !NET45 && !NET451 && !NET452 && !NET46 && !NET461 && !NET471
 using System.Runtime.InteropServices;
 #endif
 
@@ -111,7 +111,7 @@ namespace ConsoleEssentials
         /// <param name="ex"></param>
         public static void Information(Exception ex)
         {
-#if NET45 || NET451 || NET452 || NET46 || NET461
+#if NET45 || NET451 || NET452 || NET46 || NET461 || NET471
             Information($"{ex.Message}[{ex.HResult}]{ex.StackTrace}");
 #else
             int hresult = Marshal.GetHRForException(ex);
@@ -126,7 +126,7 @@ namespace ConsoleEssentials
         /// <param name="ex"></param>
         public static void Information(string message, Exception ex)
         {
-#if NET45 || NET451 || NET452 || NET46 || NET461
+#if NET45 || NET451 || NET452 || NET46 || NET461 || NET471
             Information($"{message}{Environment.NewLine}{ex.Message}[{ex.HResult}]{ex.StackTrace}");
 #else
             int hresult = Marshal.GetHRForException(ex);
@@ -156,7 +156,7 @@ namespace ConsoleEssentials
         /// <param name="ex"></param>
         public static void Warning(Exception ex)
         {
-#if NET45 || NET451 || NET452 || NET46 || NET461
+#if NET45 || NET451 || NET452 || NET46 || NET461 || NET471
             Warning($"{ex.Message}[{ex.HResult}]{ex.StackTrace}");
 #else
             int hresult = Marshal.GetHRForException(ex);
@@ -171,7 +171,7 @@ namespace ConsoleEssentials
         /// <param name="ex"></param>
         public static void Warning(string message, Exception ex)
         {
-#if NET45 || NET451 || NET452 || NET46 || NET461
+#if NET45 || NET451 || NET452 || NET46 || NET461 || NET471
             Warning($"{message}{Environment.NewLine}{ex.Message}[{ex.HResult}]{ex.StackTrace}");
 #else
             int hresult = Marshal.GetHRForException(ex);
@@ -201,7 +201,7 @@ namespace ConsoleEssentials
         /// <param name="ex"></param>
         public static void Error(Exception ex)
         {
-#if NET45 || NET451 || NET452 || NET46 || NET461
+#if NET45 || NET451 || NET452 || NET46 || NET461 || NET471
             Error($"{ex.Message}[{ex.HResult}]{ex.StackTrace}");
 #else
             int hresult = Marshal.GetHRForException(ex);
@@ -216,7 +216,7 @@ namespace ConsoleEssentials
         /// <param name="ex"></param>
         public static void Error(string message, Exception ex)
         {
-#if NET45 || NET451 || NET452 || NET46 || NET461
+#if NET45 || NET451 || NET452 || NET46 || NET461 || NET471
             Error($"{message}{Environment.NewLine}{ex.Message}[{ex.HResult}]{ex.StackTrace}");
 #else
             int hresult = Marshal.GetHRForException(ex);
@@ -249,7 +249,7 @@ namespace ConsoleEssentials
         /// <param name="ex"></param>
         public static void Critical(Exception ex)
         {
-#if NET45 || NET451 || NET452 || NET46 || NET461
+#if NET45 || NET451 || NET452 || NET46 || NET461 || NET471
             Critical($"{ex.Message}[{ex.HResult}]{ex.StackTrace}");
 #else
             int hresult = Marshal.GetHRForException(ex);
@@ -264,7 +264,7 @@ namespace ConsoleEssentials
         /// <param name="ex"></param>
         public static void Critical(string message, Exception ex)
         {
-#if NET45 || NET451 || NET452 || NET46 || NET461
+#if NET45 || NET451 || NET452 || NET46 || NET461 || NET471
             Critical($"{message}{Environment.NewLine}{ex.Message}[{ex.HResult}]{ex.StackTrace}");
 #else
             int hresult = Marshal.GetHRForException(ex);

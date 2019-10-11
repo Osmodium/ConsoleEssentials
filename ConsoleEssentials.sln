@@ -23,6 +23,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleEssentials.NET.3.0",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleEssentials.NET.2.0", "ConsoleEssentials.NET.2.0\ConsoleEssentials.NET.2.0.csproj", "{5E6B6660-564D-4F61-9BB2-12B19892D017}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleEssentials.NET.4.7.1", "ConsoleEssentials.NET.4.7.1\ConsoleEssentials.NET.4.7.1.csproj", "{A84DB936-4567-4128-9CCF-BD40347D0244}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{027AD013-B242-4E6A-BCCB-2107F6167E7B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +73,14 @@ Global
 		{5E6B6660-564D-4F61-9BB2-12B19892D017}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E6B6660-564D-4F61-9BB2-12B19892D017}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E6B6660-564D-4F61-9BB2-12B19892D017}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A84DB936-4567-4128-9CCF-BD40347D0244}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A84DB936-4567-4128-9CCF-BD40347D0244}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A84DB936-4567-4128-9CCF-BD40347D0244}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A84DB936-4567-4128-9CCF-BD40347D0244}.Release|Any CPU.Build.0 = Release|Any CPU
+		{027AD013-B242-4E6A-BCCB-2107F6167E7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{027AD013-B242-4E6A-BCCB-2107F6167E7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{027AD013-B242-4E6A-BCCB-2107F6167E7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{027AD013-B242-4E6A-BCCB-2107F6167E7B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
