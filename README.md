@@ -35,6 +35,7 @@ The easiest way to install it is to find it on the NuGet market place, but here'
 The example below showcases the parsing of parameters (arguments/args) and some simple loggin to the default location.
 
 ```csharp
+using System.Collections;
 using ConsoleEssentials;
 
 // Required parameters
@@ -69,6 +70,11 @@ public static void Main(string[] args)
 
 	// Use "GetOptionSwitch" to set a bool to if the switch is set or not.
 	bool OptionalSwitchValue = m_Parameters.GetOptionSwitch(OPTIONAL_SWITCH);
+
+    // Use "GetMainOption" to get the option which has no name. This option can't follow a switch type.
+    string mainParameterValue = m_Parameters.GetMainOption();
+    if (!string.IsNullOrEmpty(mainParameterValue))
+        Log.Error(mainParameterValue);
 
 	Log.Information(RequiredParam1Value);
 	Log.Warning(RequiredParam2Value);
