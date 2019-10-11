@@ -96,6 +96,18 @@ To run the console application we need to parse the arguments like these example
 
 >Input
 
+`Program.exe "This is the main param" -RequiredParam1 "This is the first param value" -RequiredParam2 "C:\Temp files\lala" -OptionalParam "Here's the optional param" -Switch`
+
+>Output
+
+    25-Apr-18 15:34:35 - ERROR - This is the main param
+    25-Apr-18 15:34:35 - INFO  - This is the first param value
+    25-Apr-18 15:34:35 - WARN  - C:\Temp files\lala
+    25-Apr-18 15:34:35 - CRIT  - Here's the optional param
+
+
+>Input
+
 `Program.exe -RequiredParam1 "This is the first param value" -RequiredParam2 "C:\Temp files\lala" -Switch`
 
 >Output
