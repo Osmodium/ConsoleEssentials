@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <RootNamespace>ConsoleEssentials</RootNamespace>
+    <Version>1.1.1</Version>
+    <Copyright>Christian Schubert</Copyright>
+    <Authors>Christian Schubert</Authors>
+    <Company>Christian Schubert</Company>
+    <AssemblyName>ConsoleEssentials</AssemblyName>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>TRACE;CORE21</DefineConstants>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>bin\Release\ConsoleEssentials.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>TRACE;CORE20</DefineConstants>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\ConsoleEssentials\Arguments.cs" Link="Arguments.cs" />
+    <Compile Include="..\ConsoleEssentials\Log.cs" Link="Log.cs" />
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="if $(ConfigurationName) == Debug goto :nocopy&#xD;&#xA;SET outdir=Nuget\lib\core22\&#xD;&#xA;if not exist &quot;$(SolutionDir)%outdir%&quot; mkdir $(SolutionDir)%outdir%&#xD;&#xA;COPY &quot;$(TargetDir)$(TargetName).dll&quot; &quot;$(SolutionDir)%outdir%$(TargetName).dll&quot; /Y&#xD;&#xA;COPY &quot;$(TargetDir)$(TargetName).xml&quot; &quot;$(SolutionDir)%outdir%$(TargetName).xml&quot; /Y&#xD;&#xA;:nocopy" />
+  </Target>
+
+</Project>
