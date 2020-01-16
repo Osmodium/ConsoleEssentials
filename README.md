@@ -1,3 +1,4 @@
+
 # ConsoleEssentials
 
 ### Synopsis
@@ -12,9 +13,11 @@ This is the list of current features
 * Parse arguments.
 * Verify arguments.
 * Easy extraction of parameter values.
-* Available for all major versions of .NET
+* Available for all major versions of .NET.
+* Available for some versions of .NET Core.
+	* 2.0, 2.1 and 2.2.
 
-> More features will be added along the way as they are needed.
+> More features will be added along the way as they are needed. Please use the [issues](https://github.com/Osmodium/ConsoleEssentials/issues "Link") part of GitHub to submit ideas.
 
 ### Motivation
 Through the course of a day at my work, I often come across some small task that requires automation or to create a simple POC of something new that can be isolated completely and tested separately. I had several "GenericConsole" projects lying around where stuff would be bunched together, or I would have 100 small projects that had 30% redundant code in it. This usually was all of the parameter parsing and logging in it, and every project would be a little bit different than the one before. So I finally decided to create a NuGet package for it, so that when ever I would update it, ALL of my previous projects would almost instantly benefit from that update.
@@ -23,13 +26,13 @@ Through the course of a day at my work, I often come across some small task that
 The easiest way to install it is to find it on the NuGet market place, but here's some alternatives.
 
 **Package Manager**
-> PM> Install-Package ConsoleEssentials -Version 1.1.0
+> PM> Install-Package ConsoleEssentials -Version 1.2.1
 
 **.NET CLI**
-> dotnet add package ConsoleEssentials --version 1.1.0
+> dotnet add package ConsoleEssentials --version 1.2.1
 
 **Paket CLI**
-> paket add ConsoleEssentials --version 1.1.0
+> paket add ConsoleEssentials --version 1.2.1
 
 ### Example Code
 
