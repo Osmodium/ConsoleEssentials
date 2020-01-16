@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <RootNamespace>ConsoleEssentials</RootNamespace>
-    <Version>1.2.1</Version>
+    <Version>1.2.2</Version>
     <Copyright>Christian Schubert</Copyright>
     <Authors>Christian Schubert</Authors>
     <Company>Christian Schubert</Company>

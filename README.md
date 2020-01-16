@@ -26,13 +26,13 @@ Through the course of a day at my work, I often come across some small task that
 The easiest way to install it is to find it on the NuGet market place, but here's some alternatives.
 
 **Package Manager**
-> PM> Install-Package ConsoleEssentials -Version 1.2.1
+> PM> Install-Package ConsoleEssentials -Version 1.2.2
 
 **.NET CLI**
-> dotnet add package ConsoleEssentials --version 1.2.1
+> dotnet add package ConsoleEssentials --version 1.2.2
 
 **Paket CLI**
-> paket add ConsoleEssentials --version 1.2.1
+> paket add ConsoleEssentials --version 1.2.2
 
 ### Example Code
 
