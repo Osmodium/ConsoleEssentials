@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <RootNamespace>ConsoleEssentials</RootNamespace>
-    <Version>1.2.2</Version>
+    <Version>1.2.3</Version>
     <Copyright>Christian Schubert</Copyright>
     <Authors>Christian Schubert</Authors>
     <Company>Christian Schubert</Company>
@@ -27,7 +27,7 @@
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="if $(ConfigurationName) == Debug goto :nocopy&#xD;&#xA;SET outdir=Nuget\lib\core21\&#xD;&#xA;if not exist &quot;$(SolutionDir)%outdir%&quot; mkdir $(SolutionDir)%outdir%&#xD;&#xA;COPY &quot;$(TargetDir)$(TargetName).dll&quot; &quot;$(SolutionDir)%outdir%$(TargetName).dll&quot; /Y&#xD;&#xA;COPY &quot;$(TargetDir)$(TargetName).xml&quot; &quot;$(SolutionDir)%outdir%$(TargetName).xml&quot; /Y&#xD;&#xA;:nocopy" />
+    <Exec Command="if $(ConfigurationName) == Debug goto :nocopy&#xD;&#xA;SET outdir=Nuget\lib\netcoreapp2.1\&#xD;&#xA;if not exist &quot;$(SolutionDir)%outdir%&quot; mkdir $(SolutionDir)%outdir%&#xD;&#xA;COPY &quot;$(TargetDir)$(TargetName).dll&quot; &quot;$(SolutionDir)%outdir%$(TargetName).dll&quot; /Y&#xD;&#xA;COPY &quot;$(TargetDir)$(TargetName).xml&quot; &quot;$(SolutionDir)%outdir%$(TargetName).xml&quot; /Y&#xD;&#xA;:nocopy" />
   </Target>
 
 </Project>
